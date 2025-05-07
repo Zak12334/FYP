@@ -1,0 +1,422 @@
+2025-04-22 18:47:34,529 - weather_sync - INFO - Starting weather data synchronization
+2025-04-22 18:47:34,529 - weather_sync - INFO - Fetching temperature for Charleville (52.354, -8.6797)
+2025-04-22 18:47:34,947 - weather_sync - INFO - Temperature for Charleville: 11.7°C
+2025-04-22 18:47:35,463 - weather_sync - ERROR - Error updating weather data for Charleville: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:36,472 - weather_sync - INFO - Fetching temperature for Clonakilty (51.6208, -8.8709)
+2025-04-22 18:47:37,037 - weather_sync - INFO - Temperature for Clonakilty: 12.6°C
+2025-04-22 18:47:37,560 - weather_sync - ERROR - Error updating weather data for Clonakilty: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:38,564 - weather_sync - INFO - Fetching temperature for Skibbereen (51.5481, -9.2695)
+2025-04-22 18:47:38,928 - weather_sync - INFO - Temperature for Skibbereen: 12.2°C
+2025-04-22 18:47:39,554 - weather_sync - ERROR - Error updating weather data for Skibbereen: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:39,701 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:47:40,558 - weather_sync - INFO - Fetching temperature for Clonakility (51.6208, -8.8709)
+2025-04-22 18:47:40,807 - weather_sync - INFO - Temperature for Clonakility: 12.6°C
+2025-04-22 18:47:41,391 - weather_sync - ERROR - Error updating weather data for Clonakility: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:42,398 - weather_sync - INFO - Fetching temperature for Inniscarra (51.9073, -8.6461)
+2025-04-22 18:47:42,709 - weather_sync - INFO - Temperature for Inniscarra: 12.6°C
+2025-04-22 18:47:43,252 - weather_sync - ERROR - Error updating weather data for Inniscarra: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:44,214 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:47:44,270 - weather_sync - INFO - Fetching temperature for Macroom (51.9071, -8.959)
+2025-04-22 18:47:44,607 - weather_sync - INFO - Temperature for Macroom: 11.9°C
+2025-04-22 18:47:45,743 - weather_sync - ERROR - Error updating weather data for Macroom: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:46,749 - weather_sync - INFO - Fetching temperature for Mitchelstown (52.2647, -8.2753)
+2025-04-22 18:47:47,179 - weather_sync - INFO - Temperature for Mitchelstown: 11.1°C
+2025-04-22 18:47:47,631 - weather_sync - ERROR - Error updating weather data for Mitchelstown: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:48,645 - weather_sync - INFO - Fetching temperature for Castletownbere (51.6538, -9.9112)
+2025-04-22 18:47:48,732 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:47:48,962 - weather_sync - INFO - Temperature for Castletownbere: 11.6°C
+2025-04-22 18:47:49,381 - weather_sync - ERROR - Error updating weather data for Castletownbere: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:50,386 - weather_sync - INFO - Fetching temperature for Bantry (51.6749, -9.4535)
+2025-04-22 18:47:50,785 - weather_sync - INFO - Temperature for Bantry: 11.8°C
+2025-04-22 18:47:51,268 - weather_sync - ERROR - Error updating weather data for Bantry: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:52,282 - weather_sync - INFO - Fetching temperature for Newberry Cross (52.0789, -8.2549)
+2025-04-22 18:47:52,613 - weather_sync - INFO - Temperature for Newberry Cross: 12.1°C
+2025-04-22 18:47:53,105 - weather_sync - ERROR - Error updating weather data for Newberry Cross: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:53,382 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:47:54,111 - weather_sync - INFO - Fetching temperature for Kinsale (51.7062, -8.5224)
+2025-04-22 18:47:54,432 - weather_sync - INFO - Temperature for Kinsale: 12.5°C
+2025-04-22 18:47:54,835 - weather_sync - ERROR - Error updating weather data for Kinsale: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 18:47:55,842 - weather_sync - INFO - Weather sync completed. Results: {'Charleville': False, 'Clonakilty': False, 'Skibbereen': False, 'Clonakility': False, 'Inniscarra': False, 'Macroom': False, 'Mitchelstown': False, 'Castletownbere': False, 'Bantry': False, 'Newberry Cross': False, 'Kinsale': False}
+2025-04-22 18:47:57,746 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:02,311 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:06,629 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:10,879 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:15,179 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:19,388 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:24,020 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:28,217 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:32,360 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:36,428 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-04-22 18:48:44,161 - dash.dash - INFO - Dash is running on http://127.0.0.1:5000/
+
+2025-04-22 18:48:44,180 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-22 18:48:44,180 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-22 18:49:03,255 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:49:03] "GET / HTTP/1.1" 200 -
+2025-04-22 18:49:04,188 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:49:04] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-04-22 18:49:04,194 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:49:04] "GET /_dash-layout HTTP/1.1" 200 -
+2025-04-22 18:49:04,322 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:49:04] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-04-22 18:49:04,328 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:49:04] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-04-22 18:49:04,339 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:49:04] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-04-22 18:49:04,352 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:49:04] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-04-22 18:49:04,367 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:49:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 18:49:04,898 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:49:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 18:51:46,149 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:51:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 18:51:46,280 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:51:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 18:51:49,139 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:51:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 18:51:49,316 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:51:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 18:51:51,023 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:51:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 18:51:56,231 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:51:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 18:51:58,928 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:51:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 18:52:06,172 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2025 18:52:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-04-22 21:25:52,278 - weather_sync - INFO - Starting weather data synchronization
+2025-04-22 21:25:52,278 - weather_sync - INFO - Fetching temperature for Clonakility (51.6208, -8.8709)
+2025-04-22 21:25:53,617 - weather_sync - INFO - Temperature for Clonakility: 10.0°C
+2025-04-22 21:25:53,830 - weather_sync - ERROR - Error updating weather data for Clonakility: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:25:54,834 - weather_sync - INFO - Fetching temperature for Clonakilty (51.6208, -8.8709)
+2025-04-22 21:25:54,998 - weather_sync - INFO - Temperature for Clonakilty: 10.0°C
+2025-04-22 21:25:55,222 - weather_sync - ERROR - Error updating weather data for Clonakilty: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:25:56,228 - weather_sync - INFO - Fetching temperature for Bantry (51.6749, -9.4535)
+2025-04-22 21:25:56,439 - weather_sync - INFO - Temperature for Bantry: 9.6°C
+2025-04-22 21:25:56,659 - weather_sync - ERROR - Error updating weather data for Bantry: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:25:57,665 - weather_sync - INFO - Fetching temperature for Newberry Cross (52.0789, -8.2549)
+2025-04-22 21:25:57,886 - weather_sync - INFO - Temperature for Newberry Cross: 9.1°C
+2025-04-22 21:25:58,104 - weather_sync - ERROR - Error updating weather data for Newberry Cross: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:25:59,105 - weather_sync - INFO - Fetching temperature for Inniscarra (51.9073, -8.6461)
+2025-04-22 21:25:59,338 - weather_sync - INFO - Temperature for Inniscarra: 9.4°C
+2025-04-22 21:25:59,564 - weather_sync - ERROR - Error updating weather data for Inniscarra: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:26:00,566 - weather_sync - INFO - Fetching temperature for Charleville (52.354, -8.6797)
+2025-04-22 21:26:00,794 - weather_sync - INFO - Temperature for Charleville: 9.1°C
+2025-04-22 21:26:01,029 - weather_sync - ERROR - Error updating weather data for Charleville: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:26:02,034 - weather_sync - INFO - Fetching temperature for Kinsale (51.7062, -8.5224)
+2025-04-22 21:26:02,259 - weather_sync - INFO - Temperature for Kinsale: 10.1°C
+2025-04-22 21:26:02,486 - weather_sync - ERROR - Error updating weather data for Kinsale: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:26:03,490 - weather_sync - INFO - Fetching temperature for Macroom (51.9071, -8.959)
+2025-04-22 21:26:04,780 - weather_sync - INFO - Temperature for Macroom: 8.9°C
+2025-04-22 21:26:05,009 - weather_sync - ERROR - Error updating weather data for Macroom: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:26:06,012 - weather_sync - INFO - Fetching temperature for Skibbereen (51.5481, -9.2695)
+2025-04-22 21:26:06,223 - weather_sync - INFO - Temperature for Skibbereen: 10.7°C
+2025-04-22 21:26:06,443 - weather_sync - ERROR - Error updating weather data for Skibbereen: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:26:07,446 - weather_sync - INFO - Fetching temperature for Mitchelstown (52.2647, -8.2753)
+2025-04-22 21:26:07,673 - weather_sync - INFO - Temperature for Mitchelstown: 8.4°C
+2025-04-22 21:26:07,900 - weather_sync - ERROR - Error updating weather data for Mitchelstown: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:26:08,901 - weather_sync - INFO - Fetching temperature for Castletownbere (51.6538, -9.9112)
+2025-04-22 21:26:09,126 - weather_sync - INFO - Temperature for Castletownbere: 10.3°C
+2025-04-22 21:26:09,343 - weather_sync - ERROR - Error updating weather data for Castletownbere: (1366, "Incorrect integer value: 'weather_sync' for column 'created_by' at row 1")
+2025-04-22 21:26:10,346 - weather_sync - INFO - Weather sync completed. Results: {'Clonakility': False, 'Clonakilty': False, 'Bantry': False, 'Newberry Cross': False, 'Inniscarra': False, 'Charleville': False, 'Kinsale': False, 'Macroom': False, 'Skibbereen': False, 'Mitchelstown': False, 'Castletownbere': False}
+2025-04-22 21:34:44,090 - weather_sync - INFO - Starting weather data synchronization
+2025-04-22 21:34:44,090 - weather_sync - INFO - Fetching temperature for Macroom (51.9071, -8.959)
+2025-04-22 21:34:44,315 - weather_sync - INFO - Temperature for Macroom: 8.9°C
+2025-04-22 21:34:44,556 - weather_sync - INFO - Created new temperature record for Macroom
+2025-04-22 21:34:45,598 - weather_sync - INFO - Fetching temperature for Newberry Cross (52.0789, -8.2549)
+2025-04-22 21:34:45,761 - weather_sync - INFO - Temperature for Newberry Cross: 9.1°C
+2025-04-22 21:34:45,994 - weather_sync - INFO - Created new temperature record for Newberry Cross
+2025-04-22 21:34:47,042 - weather_sync - INFO - Fetching temperature for Clonakility (51.6208, -8.8709)
+2025-04-22 21:34:47,210 - weather_sync - INFO - Temperature for Clonakility: 10.0°C
+2025-04-22 21:34:48,496 - weather_sync - INFO - Created new temperature record for Clonakility
+2025-04-22 21:34:49,538 - weather_sync - INFO - Fetching temperature for Castletownbere (51.6538, -9.9112)
+2025-04-22 21:34:49,728 - weather_sync - INFO - Temperature for Castletownbere: 10.3°C
+2025-04-22 21:34:49,972 - weather_sync - INFO - Created new temperature record for Castletownbere
+2025-04-22 21:34:51,010 - weather_sync - INFO - Fetching temperature for Skibbereen (51.5481, -9.2695)
+2025-04-22 21:34:51,205 - weather_sync - INFO - Temperature for Skibbereen: 10.7°C
+2025-04-22 21:34:51,438 - weather_sync - INFO - Created new temperature record for Skibbereen
+2025-04-22 21:34:52,477 - weather_sync - INFO - Fetching temperature for Inniscarra (51.9073, -8.6461)
+2025-04-22 21:34:52,626 - weather_sync - INFO - Temperature for Inniscarra: 9.4°C
+2025-04-22 21:34:52,871 - weather_sync - INFO - Created new temperature record for Inniscarra
+2025-04-22 21:34:53,908 - weather_sync - INFO - Fetching temperature for Bantry (51.6749, -9.4535)
+2025-04-22 21:34:54,076 - weather_sync - INFO - Temperature for Bantry: 9.6°C
+2025-04-22 21:34:54,322 - weather_sync - INFO - Created new temperature record for Bantry
+2025-04-22 21:34:55,361 - weather_sync - INFO - Fetching temperature for Kinsale (51.7062, -8.5224)
+2025-04-22 21:34:55,559 - weather_sync - INFO - Temperature for Kinsale: 10.1°C
+2025-04-22 21:34:55,789 - weather_sync - INFO - Created new temperature record for Kinsale
+2025-04-22 21:34:56,822 - weather_sync - INFO - Fetching temperature for Charleville (52.354, -8.6797)
+2025-04-22 21:34:56,994 - weather_sync - INFO - Temperature for Charleville: 9.1°C
+2025-04-22 21:34:57,206 - weather_sync - INFO - Created new temperature record for Charleville
+2025-04-22 21:34:58,250 - weather_sync - INFO - Fetching temperature for Clonakilty (51.6208, -8.8709)
+2025-04-22 21:34:59,435 - weather_sync - INFO - Temperature for Clonakilty: 10.0°C
+2025-04-22 21:34:59,660 - weather_sync - INFO - Created new temperature record for Clonakilty
+2025-04-22 21:35:00,706 - weather_sync - INFO - Fetching temperature for Mitchelstown (52.2647, -8.2753)
+2025-04-22 21:35:00,873 - weather_sync - INFO - Temperature for Mitchelstown: 8.4°C
+2025-04-22 21:35:01,103 - weather_sync - INFO - Created new temperature record for Mitchelstown
+2025-04-22 21:35:02,143 - weather_sync - INFO - Weather sync completed. Results: {'Macroom': True, 'Newberry Cross': True, 'Clonakility': True, 'Castletownbere': True, 'Skibbereen': True, 'Inniscarra': True, 'Bantry': True, 'Kinsale': True, 'Charleville': True, 'Clonakilty': True, 'Mitchelstown': True}
+2025-04-22 23:26:49,711 - weather_sync - INFO - Starting weather data synchronization
+2025-04-22 23:26:49,711 - weather_sync - INFO - Fetching temperature for Clonakilty (51.6208, -8.8709)
+2025-04-22 23:26:50,074 - weather_sync - INFO - Temperature for Clonakilty: 9.8°C
+2025-04-22 23:26:50,424 - weather_sync - INFO - Updated existing temperature record for Clonakilty
+2025-04-22 23:26:51,460 - weather_sync - INFO - Fetching temperature for Castletownbere (51.6538, -9.9112)
+2025-04-22 23:26:51,668 - weather_sync - INFO - Temperature for Castletownbere: 10.5°C
+2025-04-22 23:26:51,896 - weather_sync - INFO - Updated existing temperature record for Castletownbere
+2025-04-22 23:26:52,930 - weather_sync - INFO - Fetching temperature for Kinsale (51.7062, -8.5224)
+2025-04-22 23:26:53,164 - weather_sync - INFO - Temperature for Kinsale: 9.5°C
+2025-04-22 23:26:53,386 - weather_sync - INFO - Updated existing temperature record for Kinsale
+2025-04-22 23:26:54,426 - weather_sync - INFO - Fetching temperature for Charleville (52.354, -8.6797)
+2025-04-22 23:26:54,695 - weather_sync - INFO - Temperature for Charleville: 9.2°C
+2025-04-22 23:26:54,928 - weather_sync - INFO - Updated existing temperature record for Charleville
+2025-04-22 23:26:55,972 - weather_sync - INFO - Fetching temperature for Mitchelstown (52.2647, -8.2753)
+2025-04-22 23:26:56,183 - weather_sync - INFO - Temperature for Mitchelstown: 8.3°C
+2025-04-22 23:26:56,430 - weather_sync - INFO - Updated existing temperature record for Mitchelstown
+2025-04-22 23:26:57,466 - weather_sync - INFO - Fetching temperature for Skibbereen (51.5481, -9.2695)
+2025-04-22 23:26:57,683 - weather_sync - INFO - Temperature for Skibbereen: 10.7°C
+2025-04-22 23:26:57,929 - weather_sync - INFO - Updated existing temperature record for Skibbereen
+2025-04-22 23:26:58,971 - weather_sync - INFO - Fetching temperature for Clonakility (51.6208, -8.8709)
+2025-04-22 23:26:59,148 - weather_sync - INFO - Temperature for Clonakility: 9.8°C
+2025-04-22 23:26:59,396 - weather_sync - INFO - Updated existing temperature record for Clonakility
+2025-04-22 23:27:00,440 - weather_sync - INFO - Fetching temperature for Inniscarra (51.9073, -8.6461)
+2025-04-22 23:27:00,695 - weather_sync - INFO - Temperature for Inniscarra: 8.7°C
+2025-04-22 23:27:00,913 - weather_sync - INFO - Updated existing temperature record for Inniscarra
+2025-04-22 23:27:03,904 - weather_sync - INFO - Fetching temperature for Newberry Cross (52.0789, -8.2549)
+2025-04-22 23:27:04,129 - weather_sync - INFO - Temperature for Newberry Cross: 8.9°C
+2025-04-22 23:27:04,379 - weather_sync - INFO - Updated existing temperature record for Newberry Cross
+2025-04-22 23:27:05,428 - weather_sync - INFO - Fetching temperature for Macroom (51.9071, -8.959)
+2025-04-22 23:27:05,672 - weather_sync - INFO - Temperature for Macroom: 8.7°C
+2025-04-22 23:27:05,902 - weather_sync - INFO - Updated existing temperature record for Macroom
+2025-04-22 23:27:06,936 - weather_sync - INFO - Fetching temperature for Bantry (51.6749, -9.4535)
+2025-04-22 23:27:07,153 - weather_sync - INFO - Temperature for Bantry: 9.5°C
+2025-04-22 23:27:07,382 - weather_sync - INFO - Updated existing temperature record for Bantry
+2025-04-22 23:27:08,436 - weather_sync - INFO - Weather sync completed. Results: {'Clonakilty': True, 'Castletownbere': True, 'Kinsale': True, 'Charleville': True, 'Mitchelstown': True, 'Skibbereen': True, 'Clonakility': True, 'Inniscarra': True, 'Newberry Cross': True, 'Macroom': True, 'Bantry': True}
+2025-04-22 23:28:23,002 - weather_sync - INFO - Starting Cork weather data synchronization
+2025-04-22 23:28:23,245 - weather_sync - INFO - Temperature for Cork: 8.8°C
+2025-04-22 23:28:24,514 - weather_sync - INFO - Created new temperature record for Cork
+2025-04-22 23:29:43,599 - weather_sync - INFO - Starting Cork weather data synchronization
+2025-04-22 23:29:44,875 - weather_sync - INFO - Temperature for Cork: 8.8°C
+2025-04-22 23:29:45,112 - weather_sync - INFO - Updated existing temperature record for Cork
+2025-04-22 23:30:32,745 - weather_sync - INFO - Starting Cork weather data synchronization
+2025-04-22 23:30:32,973 - weather_sync - INFO - Temperature for Cork: 8.8°C
+2025-04-22 23:30:33,190 - weather_sync - INFO - Updated existing temperature record for Cork
+2025-04-22 23:30:43,671 - weather_sync - INFO - Starting Cork weather data synchronization
+2025-04-22 23:30:43,870 - weather_sync - INFO - Temperature for Cork: 8.8°C
+2025-04-22 23:30:44,094 - weather_sync - INFO - Updated existing temperature record for Cork
+2025-04-22 23:31:13,002 - weather_sync - INFO - Backfilled temperature data for Mitchelstown
+2025-04-22 23:31:43,007 - weather_sync - INFO - Backfilled temperature data for Clonakility
+2025-04-22 23:33:13,849 - weather_sync - INFO - Starting Cork weather data synchronization
+2025-04-22 23:33:14,182 - weather_sync - INFO - Temperature for Cork: 8.8°C
+2025-04-22 23:33:14,409 - weather_sync - INFO - Updated existing temperature record for Cork
+2025-04-22 23:33:14,472 - weather_sync - INFO - Backfilling temperature for Cork from 2025-01-01 to yesterday
+2025-04-22 23:33:14,709 - weather_sync - INFO - Added historical data for Cork on 2025-01-01
+2025-04-22 23:33:14,983 - weather_sync - INFO - Added historical data for Cork on 2025-01-02
+2025-04-22 23:33:15,238 - weather_sync - INFO - Added historical data for Cork on 2025-01-03
+2025-04-22 23:33:15,503 - weather_sync - INFO - Added historical data for Cork on 2025-01-04
+2025-04-22 23:33:15,767 - weather_sync - INFO - Added historical data for Cork on 2025-01-05
+2025-04-22 23:33:16,019 - weather_sync - INFO - Added historical data for Cork on 2025-01-06
+2025-04-22 23:33:16,300 - weather_sync - INFO - Added historical data for Cork on 2025-01-07
+2025-04-22 23:33:16,585 - weather_sync - INFO - Added historical data for Cork on 2025-01-08
+2025-04-22 23:33:16,852 - weather_sync - INFO - Added historical data for Cork on 2025-01-09
+2025-04-22 23:33:17,116 - weather_sync - INFO - Added historical data for Cork on 2025-01-10
+2025-04-22 23:33:17,401 - weather_sync - INFO - Added historical data for Cork on 2025-01-11
+2025-04-22 23:33:17,667 - weather_sync - INFO - Added historical data for Cork on 2025-01-12
+2025-04-22 23:33:17,919 - weather_sync - INFO - Added historical data for Cork on 2025-01-13
+2025-04-22 23:33:18,202 - weather_sync - INFO - Added historical data for Cork on 2025-01-14
+2025-04-22 23:33:18,499 - weather_sync - INFO - Added historical data for Cork on 2025-01-15
+2025-04-22 23:33:18,769 - weather_sync - INFO - Added historical data for Cork on 2025-01-16
+2025-04-22 23:33:19,033 - weather_sync - INFO - Added historical data for Cork on 2025-01-17
+2025-04-22 23:33:19,304 - weather_sync - INFO - Added historical data for Cork on 2025-01-18
+2025-04-22 23:33:19,555 - weather_sync - INFO - Added historical data for Cork on 2025-01-19
+2025-04-22 23:33:19,821 - weather_sync - INFO - Added historical data for Cork on 2025-01-20
+2025-04-22 23:33:20,088 - weather_sync - INFO - Added historical data for Cork on 2025-01-21
+2025-04-22 23:33:20,368 - weather_sync - INFO - Added historical data for Cork on 2025-01-22
+2025-04-22 23:33:20,663 - weather_sync - INFO - Added historical data for Cork on 2025-01-23
+2025-04-22 23:33:20,952 - weather_sync - INFO - Added historical data for Cork on 2025-01-24
+2025-04-22 23:33:21,224 - weather_sync - INFO - Added historical data for Cork on 2025-01-25
+2025-04-22 23:33:21,504 - weather_sync - INFO - Added historical data for Cork on 2025-01-26
+2025-04-22 23:33:21,791 - weather_sync - INFO - Added historical data for Cork on 2025-01-27
+2025-04-22 23:33:22,069 - weather_sync - INFO - Added historical data for Cork on 2025-01-28
+2025-04-22 23:33:22,339 - weather_sync - INFO - Added historical data for Cork on 2025-01-29
+2025-04-22 23:33:22,602 - weather_sync - INFO - Added historical data for Cork on 2025-01-30
+2025-04-22 23:33:22,889 - weather_sync - INFO - Added historical data for Cork on 2025-01-31
+2025-04-22 23:33:23,152 - weather_sync - INFO - Added historical data for Cork on 2025-02-01
+2025-04-22 23:33:23,420 - weather_sync - INFO - Added historical data for Cork on 2025-02-02
+2025-04-22 23:33:23,701 - weather_sync - INFO - Added historical data for Cork on 2025-02-03
+2025-04-22 23:33:23,971 - weather_sync - INFO - Added historical data for Cork on 2025-02-04
+2025-04-22 23:33:24,221 - weather_sync - INFO - Added historical data for Cork on 2025-02-05
+2025-04-22 23:33:24,470 - weather_sync - INFO - Added historical data for Cork on 2025-02-06
+2025-04-22 23:33:25,711 - weather_sync - INFO - Added historical data for Cork on 2025-02-07
+2025-04-22 23:33:25,998 - weather_sync - INFO - Added historical data for Cork on 2025-02-08
+2025-04-22 23:33:26,266 - weather_sync - INFO - Added historical data for Cork on 2025-02-09
+2025-04-22 23:33:26,507 - weather_sync - INFO - Added historical data for Cork on 2025-02-10
+2025-04-22 23:33:26,802 - weather_sync - INFO - Added historical data for Cork on 2025-02-11
+2025-04-22 23:33:27,072 - weather_sync - INFO - Added historical data for Cork on 2025-02-12
+2025-04-22 23:33:27,351 - weather_sync - INFO - Added historical data for Cork on 2025-02-13
+2025-04-22 23:33:27,622 - weather_sync - INFO - Added historical data for Cork on 2025-02-14
+2025-04-22 23:33:27,886 - weather_sync - INFO - Added historical data for Cork on 2025-02-15
+2025-04-22 23:33:28,173 - weather_sync - INFO - Added historical data for Cork on 2025-02-16
+2025-04-22 23:33:28,465 - weather_sync - INFO - Added historical data for Cork on 2025-02-17
+2025-04-22 23:33:28,718 - weather_sync - INFO - Added historical data for Cork on 2025-02-18
+2025-04-22 23:33:29,001 - weather_sync - INFO - Added historical data for Cork on 2025-02-19
+2025-04-22 23:33:29,283 - weather_sync - INFO - Added historical data for Cork on 2025-02-20
+2025-04-22 23:33:29,566 - weather_sync - INFO - Added historical data for Cork on 2025-02-21
+2025-04-22 23:33:29,832 - weather_sync - INFO - Added historical data for Cork on 2025-02-22
+2025-04-22 23:33:30,099 - weather_sync - INFO - Added historical data for Cork on 2025-02-23
+2025-04-22 23:33:30,390 - weather_sync - INFO - Added historical data for Cork on 2025-02-24
+2025-04-22 23:33:30,648 - weather_sync - INFO - Added historical data for Cork on 2025-02-25
+2025-04-22 23:33:30,934 - weather_sync - INFO - Added historical data for Cork on 2025-02-26
+2025-04-22 23:33:31,214 - weather_sync - INFO - Added historical data for Cork on 2025-02-27
+2025-04-22 23:33:31,483 - weather_sync - INFO - Added historical data for Cork on 2025-02-28
+2025-04-22 23:33:31,750 - weather_sync - INFO - Added historical data for Cork on 2025-03-01
+2025-04-22 23:33:32,031 - weather_sync - INFO - Added historical data for Cork on 2025-03-02
+2025-04-22 23:33:32,308 - weather_sync - INFO - Added historical data for Cork on 2025-03-03
+2025-04-22 23:33:32,582 - weather_sync - INFO - Added historical data for Cork on 2025-03-04
+2025-04-22 23:33:32,843 - weather_sync - INFO - Added historical data for Cork on 2025-03-05
+2025-04-22 23:33:33,101 - weather_sync - INFO - Added historical data for Cork on 2025-03-06
+2025-04-22 23:33:33,377 - weather_sync - INFO - Added historical data for Cork on 2025-03-07
+2025-04-22 23:33:33,649 - weather_sync - INFO - Added historical data for Cork on 2025-03-08
+2025-04-22 23:33:33,939 - weather_sync - INFO - Added historical data for Cork on 2025-03-09
+2025-04-22 23:33:34,205 - weather_sync - INFO - Added historical data for Cork on 2025-03-10
+2025-04-22 23:33:34,460 - weather_sync - INFO - Added historical data for Cork on 2025-03-11
+2025-04-22 23:33:34,730 - weather_sync - INFO - Added historical data for Cork on 2025-03-12
+2025-04-22 23:33:35,004 - weather_sync - INFO - Added historical data for Cork on 2025-03-13
+2025-04-22 23:33:35,267 - weather_sync - INFO - Added historical data for Cork on 2025-03-14
+2025-04-22 23:33:35,522 - weather_sync - INFO - Added historical data for Cork on 2025-03-15
+2025-04-22 23:33:35,819 - weather_sync - INFO - Added historical data for Cork on 2025-03-16
+2025-04-22 23:33:36,102 - weather_sync - INFO - Added historical data for Cork on 2025-03-17
+2025-04-22 23:33:37,046 - weather_sync - INFO - Added historical data for Cork on 2025-03-18
+2025-04-22 23:33:37,598 - weather_sync - INFO - Added historical data for Cork on 2025-03-19
+2025-04-22 23:33:37,882 - weather_sync - INFO - Added historical data for Cork on 2025-03-20
+2025-04-22 23:33:38,173 - weather_sync - INFO - Added historical data for Cork on 2025-03-21
+2025-04-22 23:33:38,400 - weather_sync - INFO - Added historical data for Cork on 2025-03-22
+2025-04-22 23:33:38,673 - weather_sync - INFO - Added historical data for Cork on 2025-03-23
+2025-04-22 23:33:38,965 - weather_sync - INFO - Added historical data for Cork on 2025-03-24
+2025-04-22 23:33:39,258 - weather_sync - INFO - Added historical data for Cork on 2025-03-25
+2025-04-22 23:33:39,501 - weather_sync - INFO - Added historical data for Cork on 2025-03-26
+2025-04-22 23:33:39,801 - weather_sync - INFO - Added historical data for Cork on 2025-03-27
+2025-04-22 23:33:40,067 - weather_sync - INFO - Added historical data for Cork on 2025-03-28
+2025-04-22 23:33:40,353 - weather_sync - INFO - Added historical data for Cork on 2025-03-29
+2025-04-22 23:33:40,607 - weather_sync - INFO - Added historical data for Cork on 2025-03-30
+2025-04-22 23:33:40,868 - weather_sync - INFO - Added historical data for Cork on 2025-03-31
+2025-04-22 23:33:41,148 - weather_sync - INFO - Added historical data for Cork on 2025-04-01
+2025-04-22 23:33:41,436 - weather_sync - INFO - Added historical data for Cork on 2025-04-02
+2025-04-22 23:33:41,698 - weather_sync - INFO - Added historical data for Cork on 2025-04-03
+2025-04-22 23:33:41,952 - weather_sync - INFO - Added historical data for Cork on 2025-04-04
+2025-04-22 23:33:42,234 - weather_sync - INFO - Added historical data for Cork on 2025-04-05
+2025-04-22 23:33:42,499 - weather_sync - INFO - Added historical data for Cork on 2025-04-06
+2025-04-22 23:33:42,779 - weather_sync - INFO - Added historical data for Cork on 2025-04-07
+2025-04-22 23:33:43,028 - weather_sync - INFO - Added historical data for Cork on 2025-04-08
+2025-04-22 23:33:43,289 - weather_sync - INFO - Added historical data for Cork on 2025-04-09
+2025-04-22 23:33:43,553 - weather_sync - INFO - Added historical data for Cork on 2025-04-10
+2025-04-22 23:33:43,822 - weather_sync - INFO - Added historical data for Cork on 2025-04-11
+2025-04-22 23:33:44,083 - weather_sync - INFO - Added historical data for Cork on 2025-04-12
+2025-04-22 23:33:44,348 - weather_sync - INFO - Added historical data for Cork on 2025-04-13
+2025-04-22 23:33:44,603 - weather_sync - INFO - Added historical data for Cork on 2025-04-14
+2025-04-22 23:33:44,866 - weather_sync - INFO - Added historical data for Cork on 2025-04-15
+2025-04-22 23:33:45,118 - weather_sync - INFO - Added historical data for Cork on 2025-04-16
+2025-04-22 23:33:45,375 - weather_sync - INFO - Added historical data for Cork on 2025-04-17
+2025-04-22 23:33:45,651 - weather_sync - INFO - Added historical data for Cork on 2025-04-18
+2025-04-22 23:33:45,929 - weather_sync - INFO - Added historical data for Cork on 2025-04-19
+2025-04-22 23:33:46,173 - weather_sync - INFO - Added historical data for Cork on 2025-04-20
+2025-04-22 23:33:46,446 - weather_sync - INFO - Added historical data for Cork on 2025-04-21
+2025-04-22 23:33:46,490 - weather_sync - INFO - Backfill completed for Cork
+2025-04-22 23:35:19,295 - weather_sync - INFO - Starting Cork weather data synchronization
+2025-04-22 23:35:19,514 - weather_sync - INFO - Temperature for Cork: 8.8°C
+2025-04-22 23:35:19,749 - weather_sync - INFO - Created new temperature record for Cork
+2025-04-22 23:35:19,807 - weather_sync - INFO - Backfilling temperature for Cork from 2025-01-01 to yesterday
+2025-04-22 23:35:20,031 - weather_sync - INFO - Added historical data for Cork on 2025-01-01
+2025-04-22 23:35:20,280 - weather_sync - INFO - Added historical data for Cork on 2025-01-02
+2025-04-22 23:35:20,558 - weather_sync - INFO - Added historical data for Cork on 2025-01-03
+2025-04-22 23:35:20,827 - weather_sync - INFO - Added historical data for Cork on 2025-01-04
+2025-04-22 23:35:21,594 - weather_sync - INFO - Added historical data for Cork on 2025-01-05
+2025-04-22 23:35:21,864 - weather_sync - INFO - Added historical data for Cork on 2025-01-06
+2025-04-22 23:35:23,145 - weather_sync - INFO - Added historical data for Cork on 2025-01-07
+2025-04-22 23:35:23,428 - weather_sync - INFO - Added historical data for Cork on 2025-01-08
+2025-04-22 23:35:23,711 - weather_sync - INFO - Added historical data for Cork on 2025-01-09
+2025-04-22 23:35:24,025 - weather_sync - INFO - Added historical data for Cork on 2025-01-10
+2025-04-22 23:35:24,326 - weather_sync - INFO - Added historical data for Cork on 2025-01-11
+2025-04-22 23:35:24,600 - weather_sync - INFO - Added historical data for Cork on 2025-01-12
+2025-04-22 23:35:24,876 - weather_sync - INFO - Added historical data for Cork on 2025-01-13
+2025-04-22 23:35:25,155 - weather_sync - INFO - Added historical data for Cork on 2025-01-14
+2025-04-22 23:35:25,461 - weather_sync - INFO - Added historical data for Cork on 2025-01-15
+2025-04-22 23:35:25,716 - weather_sync - INFO - Added historical data for Cork on 2025-01-16
+2025-04-22 23:35:25,980 - weather_sync - INFO - Added historical data for Cork on 2025-01-17
+2025-04-22 23:35:26,234 - weather_sync - INFO - Added historical data for Cork on 2025-01-18
+2025-04-22 23:35:26,511 - weather_sync - INFO - Added historical data for Cork on 2025-01-19
+2025-04-22 23:35:26,798 - weather_sync - INFO - Added historical data for Cork on 2025-01-20
+2025-04-22 23:35:27,077 - weather_sync - INFO - Added historical data for Cork on 2025-01-21
+2025-04-22 23:35:27,335 - weather_sync - INFO - Added historical data for Cork on 2025-01-22
+2025-04-22 23:35:27,611 - weather_sync - INFO - Added historical data for Cork on 2025-01-23
+2025-04-22 23:35:27,897 - weather_sync - INFO - Added historical data for Cork on 2025-01-24
+2025-04-22 23:35:28,177 - weather_sync - INFO - Added historical data for Cork on 2025-01-25
+2025-04-22 23:35:28,460 - weather_sync - INFO - Added historical data for Cork on 2025-01-26
+2025-04-22 23:35:28,728 - weather_sync - INFO - Added historical data for Cork on 2025-01-27
+2025-04-22 23:35:28,979 - weather_sync - INFO - Added historical data for Cork on 2025-01-28
+2025-04-22 23:35:29,269 - weather_sync - INFO - Added historical data for Cork on 2025-01-29
+2025-04-22 23:35:29,560 - weather_sync - INFO - Added historical data for Cork on 2025-01-30
+2025-04-22 23:35:29,826 - weather_sync - INFO - Added historical data for Cork on 2025-01-31
+2025-04-22 23:35:30,090 - weather_sync - INFO - Added historical data for Cork on 2025-02-01
+2025-04-22 23:35:30,359 - weather_sync - INFO - Added historical data for Cork on 2025-02-02
+2025-04-22 23:35:30,641 - weather_sync - INFO - Added historical data for Cork on 2025-02-03
+2025-04-22 23:35:30,924 - weather_sync - INFO - Added historical data for Cork on 2025-02-04
+2025-04-22 23:35:31,207 - weather_sync - INFO - Added historical data for Cork on 2025-02-05
+2025-04-22 23:35:31,460 - weather_sync - INFO - Added historical data for Cork on 2025-02-06
+2025-04-22 23:35:31,743 - weather_sync - INFO - Added historical data for Cork on 2025-02-07
+2025-04-22 23:35:31,993 - weather_sync - INFO - Added historical data for Cork on 2025-02-08
+2025-04-22 23:35:32,260 - weather_sync - INFO - Added historical data for Cork on 2025-02-09
+2025-04-22 23:35:32,525 - weather_sync - INFO - Added historical data for Cork on 2025-02-10
+2025-04-22 23:35:33,776 - weather_sync - INFO - Added historical data for Cork on 2025-02-11
+2025-04-22 23:35:34,043 - weather_sync - INFO - Added historical data for Cork on 2025-02-12
+2025-04-22 23:35:34,321 - weather_sync - INFO - Added historical data for Cork on 2025-02-13
+2025-04-22 23:35:34,593 - weather_sync - INFO - Added historical data for Cork on 2025-02-14
+2025-04-22 23:35:34,844 - weather_sync - INFO - Added historical data for Cork on 2025-02-15
+2025-04-22 23:35:35,108 - weather_sync - INFO - Added historical data for Cork on 2025-02-16
+2025-04-22 23:35:35,394 - weather_sync - INFO - Added historical data for Cork on 2025-02-17
+2025-04-22 23:35:35,673 - weather_sync - INFO - Added historical data for Cork on 2025-02-18
+2025-04-22 23:35:35,929 - weather_sync - INFO - Added historical data for Cork on 2025-02-19
+2025-04-22 23:35:36,209 - weather_sync - INFO - Added historical data for Cork on 2025-02-20
+2025-04-22 23:35:36,511 - weather_sync - INFO - Added historical data for Cork on 2025-02-21
+2025-04-22 23:35:36,791 - weather_sync - INFO - Added historical data for Cork on 2025-02-22
+2025-04-22 23:35:37,045 - weather_sync - INFO - Added historical data for Cork on 2025-02-23
+2025-04-22 23:35:37,322 - weather_sync - INFO - Added historical data for Cork on 2025-02-24
+2025-04-22 23:35:37,593 - weather_sync - INFO - Added historical data for Cork on 2025-02-25
+2025-04-22 23:35:37,869 - weather_sync - INFO - Added historical data for Cork on 2025-02-26
+2025-04-22 23:35:38,157 - weather_sync - INFO - Added historical data for Cork on 2025-02-27
+2025-04-22 23:35:38,446 - weather_sync - INFO - Added historical data for Cork on 2025-02-28
+2025-04-22 23:35:38,692 - weather_sync - INFO - Added historical data for Cork on 2025-03-01
+2025-04-22 23:35:38,964 - weather_sync - INFO - Added historical data for Cork on 2025-03-02
+2025-04-22 23:35:39,246 - weather_sync - INFO - Added historical data for Cork on 2025-03-03
+2025-04-22 23:35:39,497 - weather_sync - INFO - Added historical data for Cork on 2025-03-04
+2025-04-22 23:35:39,776 - weather_sync - INFO - Added historical data for Cork on 2025-03-05
+2025-04-22 23:35:40,032 - weather_sync - INFO - Added historical data for Cork on 2025-03-06
+2025-04-22 23:35:40,309 - weather_sync - INFO - Added historical data for Cork on 2025-03-07
+2025-04-22 23:35:40,594 - weather_sync - INFO - Added historical data for Cork on 2025-03-08
+2025-04-22 23:35:40,857 - weather_sync - INFO - Added historical data for Cork on 2025-03-09
+2025-04-22 23:35:41,127 - weather_sync - INFO - Added historical data for Cork on 2025-03-10
+2025-04-22 23:35:41,393 - weather_sync - INFO - Added historical data for Cork on 2025-03-11
+2025-04-22 23:35:41,662 - weather_sync - INFO - Added historical data for Cork on 2025-03-12
+2025-04-22 23:35:41,938 - weather_sync - INFO - Added historical data for Cork on 2025-03-13
+2025-04-22 23:35:42,210 - weather_sync - INFO - Added historical data for Cork on 2025-03-14
+2025-04-22 23:35:42,492 - weather_sync - INFO - Added historical data for Cork on 2025-03-15
+2025-04-22 23:35:42,750 - weather_sync - INFO - Added historical data for Cork on 2025-03-16
+2025-04-22 23:35:43,023 - weather_sync - INFO - Added historical data for Cork on 2025-03-17
+2025-04-22 23:35:43,293 - weather_sync - INFO - Added historical data for Cork on 2025-03-18
+2025-04-22 23:35:43,559 - weather_sync - INFO - Added historical data for Cork on 2025-03-19
+2025-04-22 23:35:43,841 - weather_sync - INFO - Added historical data for Cork on 2025-03-20
+2025-04-22 23:35:44,107 - weather_sync - INFO - Added historical data for Cork on 2025-03-21
+2025-04-22 23:35:45,021 - weather_sync - INFO - Added historical data for Cork on 2025-03-22
+2025-04-22 23:35:45,395 - weather_sync - INFO - Added historical data for Cork on 2025-03-23
+2025-04-22 23:35:45,656 - weather_sync - INFO - Added historical data for Cork on 2025-03-24
+2025-04-22 23:35:45,927 - weather_sync - INFO - Added historical data for Cork on 2025-03-25
+2025-04-22 23:35:46,204 - weather_sync - INFO - Added historical data for Cork on 2025-03-26
+2025-04-22 23:35:46,478 - weather_sync - INFO - Added historical data for Cork on 2025-03-27
+2025-04-22 23:35:46,755 - weather_sync - INFO - Added historical data for Cork on 2025-03-28
+2025-04-22 23:35:47,009 - weather_sync - INFO - Added historical data for Cork on 2025-03-29
+2025-04-22 23:35:47,287 - weather_sync - INFO - Added historical data for Cork on 2025-03-30
+2025-04-22 23:35:47,557 - weather_sync - INFO - Added historical data for Cork on 2025-03-31
+2025-04-22 23:35:47,824 - weather_sync - INFO - Added historical data for Cork on 2025-04-01
+2025-04-22 23:35:48,091 - weather_sync - INFO - Added historical data for Cork on 2025-04-02
+2025-04-22 23:35:48,372 - weather_sync - INFO - Added historical data for Cork on 2025-04-03
+2025-04-22 23:35:48,654 - weather_sync - INFO - Added historical data for Cork on 2025-04-04
+2025-04-22 23:35:48,936 - weather_sync - INFO - Added historical data for Cork on 2025-04-05
+2025-04-22 23:35:49,189 - weather_sync - INFO - Added historical data for Cork on 2025-04-06
+2025-04-22 23:35:49,442 - weather_sync - INFO - Added historical data for Cork on 2025-04-07
+2025-04-22 23:35:49,727 - weather_sync - INFO - Added historical data for Cork on 2025-04-08
+2025-04-22 23:35:49,989 - weather_sync - INFO - Added historical data for Cork on 2025-04-09
+2025-04-22 23:35:50,274 - weather_sync - INFO - Added historical data for Cork on 2025-04-10
+2025-04-22 23:35:50,570 - weather_sync - INFO - Added historical data for Cork on 2025-04-11
+2025-04-22 23:35:50,823 - weather_sync - INFO - Added historical data for Cork on 2025-04-12
+2025-04-22 23:35:51,103 - weather_sync - INFO - Added historical data for Cork on 2025-04-13
+2025-04-22 23:35:51,372 - weather_sync - INFO - Added historical data for Cork on 2025-04-14
+2025-04-22 23:35:51,663 - weather_sync - INFO - Added historical data for Cork on 2025-04-15
+2025-04-22 23:35:51,927 - weather_sync - INFO - Added historical data for Cork on 2025-04-16
+2025-04-22 23:35:52,196 - weather_sync - INFO - Added historical data for Cork on 2025-04-17
+2025-04-22 23:35:52,455 - weather_sync - INFO - Added historical data for Cork on 2025-04-18
+2025-04-22 23:35:52,713 - weather_sync - INFO - Added historical data for Cork on 2025-04-19
+2025-04-22 23:35:52,955 - weather_sync - INFO - Added historical data for Cork on 2025-04-20
+2025-04-22 23:35:53,245 - weather_sync - INFO - Added historical data for Cork on 2025-04-21
+2025-04-22 23:35:53,282 - weather_sync - INFO - Backfill completed for Cork
