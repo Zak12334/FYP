@@ -9,27 +9,12 @@ import os
 import traceback
 import numpy as np
 
-# Import your project modules using correct paths
+# Import project modules using correct paths
 from analytics.analytics import EnhancedSmartMeterAnalytics
 from data.data import SmartMeterDataLoader
 
-# Global mapping for meter IDs to building names
-METER_TO_BUILDING = {
-    '4663': 'Castletownbere Area Engineers Office',
-    '4664': 'Newberry Cross Machinery Depot',
-    '4665': 'Skibbereen MD',
-    '4832': 'Clonakility Library & Offices',
-    '4833': 'Skibbereen Library',
-    '4834': 'Skibbereen Heritage Centre',
-    '4835': 'Environmental Office, Inniscarra',
-    '4836': 'Mitcheltstown Area Engineers Office',
-    '4837': 'Kinsale MD Office',
-    '4839': 'Bantry Fire Station',
-    '4840': 'Charleville Area Engineers Office',
-    '4841': 'Clonakilty MD Office - Town Hall',
-    '4842': 'Castletownbere Area Engineers Office',
-    '4859': 'Macroom MD, AEO and Community Hall'
-}
+
+
 
 class SmartMeterDashboard:
     def __init__(self):
@@ -136,7 +121,6 @@ class SmartMeterDashboard:
 
     def setup_layout(self):
         # Define the Dash layout.
-        # (You can embed your complete layout code here as in your original non-OOP version.)
         self.app.layout = html.Div([
             html.Div([
                 html.H1("Cork County Council Smart Meter Analytics Dashboard",

@@ -238,7 +238,7 @@ class EnhancedSmartMeterAnalytics:
         df['day_of_month'] = df['date'].dt.day
         df['week_of_year'] = df['date'].dt.isocalendar().week
 
-        # Better cyclical encoding of time features
+        # cyclical encoding of time features
         df['day_sin'] = np.sin(2 * np.pi * df['day_of_week'] / 7)
         df['day_cos'] = np.cos(2 * np.pi * df['day_of_week'] / 7)
         df['month_sin'] = np.sin(2 * np.pi * df['month'] / 12)
@@ -256,11 +256,10 @@ class EnhancedSmartMeterAnalytics:
         season_dummies = pd.get_dummies(df['season'], prefix='season')
         df = pd.concat([df, season_dummies], axis=1)
 
-        # Add tank-specific features with improved refill detection
+        # Add tank-specific features refill detection
         meter_groups = df.groupby('meter_id')
 
-        # Calculate more robust rolling statistics per meter
-        # Use multiple window sizes for better pattern detection
+        # Calculate rolling statistics per meter
         df['rolling_mean_7d'] = meter_groups['daily_consumption'].transform(
             lambda x: x.rolling(window=7, min_periods=2).mean()
         )
@@ -271,7 +270,7 @@ class EnhancedSmartMeterAnalytics:
             lambda x: x.rolling(window=30, min_periods=5).mean()
         )
 
-        # Use median for more robust central tendency (less affected by outliers)
+        # Use median
         df['rolling_median_7d'] = meter_groups['daily_consumption'].transform(
             lambda x: x.rolling(window=7, min_periods=2).median()
         )
@@ -284,16 +283,16 @@ class EnhancedSmartMeterAnalytics:
             lambda x: x.rolling(window=14, min_periods=3).std()
         )
 
-        # Add median absolute deviation - more robust to outliers than std
+        # Add median absolute deviation
         df['rolling_mad_7d'] = meter_groups['daily_consumption'].transform(
             lambda x: (x - x.rolling(window=7, min_periods=2).median()).abs().rolling(window=7, min_periods=2).median()
         )
 
-        # Improved consumption change metrics
+        # consumption change metrics
         df['consumption_diff'] = meter_groups['daily_consumption'].diff()
         df['consumption_pct_change'] = meter_groups['daily_consumption'].pct_change() * 100
 
-        # Detect refills with more robust logic
+        # Detect refills
         df['is_refill'] = False
         for meter_id, group in meter_groups:
             # Skip if not enough data
@@ -310,7 +309,7 @@ class EnhancedSmartMeterAnalytics:
                 current = df.loc[idx, 'daily_consumption']
                 previous = df.loc[prev_idx, 'daily_consumption']
 
-                # Use rolling median and MAD for more robust outlier detection
+                # Use rolling median and MAD for outlier detection
                 rolling_median = df.loc[idx, 'rolling_median_7d'] if pd.notna(df.loc[idx, 'rolling_median_7d']) else previous
                 rolling_mad = df.loc[idx, 'rolling_mad_7d'] if pd.notna(df.loc[idx, 'rolling_mad_7d']) else (current * 0.1)  # Default to 10% if unknown
 
@@ -319,15 +318,12 @@ class EnhancedSmartMeterAnalytics:
                     continue
 
                 # Enhanced refill detection logic:
-                # 1. Significant relative increase (2x or more)
-                # 2. Significant absolute increase
-                # 3. Far from recent median (using MAD which is robust to outliers)
                 if (current > previous * 2.0 and
                     current - previous > 20 and
                     current > rolling_median + 4 * rolling_mad):
                     df.loc[idx, 'is_refill'] = True
 
-        # Track days since last refill - critical for tank level estimation
+        # Track days since last refill
         df['days_since_refill'] = df.groupby('meter_id').cumcount()
         # Reset counter on refill days
         df.loc[df['is_refill'], 'days_since_refill'] = 0
@@ -336,7 +332,7 @@ class EnhancedSmartMeterAnalytics:
             lambda x: x.replace(to_replace=0, method='ffill').cumsum()
         )
 
-        # Track when next refill occurs (use hindsight for modeling)
+        # Track when next refill occurs
         df['days_to_next_refill'] = np.nan
         for meter_id, group in meter_groups:
             refill_dates = df[df['meter_id'] == meter_id][df['is_refill']]['date']
@@ -368,11 +364,11 @@ class EnhancedSmartMeterAnalytics:
         df['days_from_holiday'] = df['date'].dt.date.map(self._days_from_last_holiday)
         df['near_holiday'] = ((df['days_to_holiday'] <= 1) | (df['days_from_holiday'] <= 1)).astype(int)
 
-        # Detect month start/end - often relevant for building usage patterns
+        # Detect month start/end
         df['is_month_start'] = (df['day_of_month'] <= 3).astype(int)
         df['is_month_end'] = (df['day_of_month'] >= 28).astype(int)
 
-        # Calculate z-scores by day of week (more specific anomaly detection)
+        # Calculate z-scores by day of week
         df['dow_zscore'] = 0.0
         for meter_id in df['meter_id'].unique():
             for day in range(7):
@@ -384,7 +380,7 @@ class EnhancedSmartMeterAnalytics:
                         day_mask = (df['meter_id'] == meter_id) & (df['day_of_week'] == day)
                         df.loc[day_mask, 'dow_zscore'] = (df.loc[day_mask, 'daily_consumption'] - day_mean) / day_std
 
-        # Account for temperature with more sophistication
+        # Account for temperature
         if 'avg_temperature' in df.columns:
             # Temperature change
             df['temp_change'] = df.groupby('meter_id')['avg_temperature'].diff()
@@ -403,7 +399,7 @@ class EnhancedSmartMeterAnalytics:
                             from sklearn.linear_model import LinearRegression
                             model = LinearRegression().fit(X, y)
 
-                            # Store temperature coefficient (sensitivity)
+                            # Store temperature coefficient
                             temp_sensitivity = model.coef_[0]
 
                             # Calculate expected consumption based on temperature
@@ -451,7 +447,7 @@ class EnhancedSmartMeterAnalytics:
             'rolling_median_7d': df['daily_consumption'].median(),
             'rolling_std_7d': df['daily_consumption'].std(),
             'rolling_std_14d': df['daily_consumption'].std(),
-            'rolling_mad_7d': df['daily_consumption'].std() * 0.5,  # MAD is typically smaller than std
+            'rolling_mad_7d': df['daily_consumption'].std() * 0.5,
             'consumption_diff': 0,
             'consumption_pct_change': 0,
             'days_to_next_refill': df['days_since_refill'].median(),
@@ -469,7 +465,7 @@ class EnhancedSmartMeterAnalytics:
             if col in df.columns:
                 df[col] = df[col].fillna(fill_val)
 
-        return df.dropna(subset=['daily_consumption'])  # Ensure no NaN in key column
+        return df.dropna(subset=['daily_consumption'])  # no NaN in key column
 
     def _days_to_next_holiday(self, date):
         """Calculate days until next Irish holiday"""
@@ -490,24 +486,24 @@ class EnhancedSmartMeterAnalytics:
         if len(meter_data) < 30:  # Need enough data for reliable threshold
             return initial_threshold
 
-        # Start with reasonably high threshold and adjust based on data characteristics
+    
         thresholds = np.arange(2.0, 5.0, 0.2)
         best_threshold = initial_threshold
         best_score = float('inf')  # Lower is better
 
-        # Calculate consumption volatility - more volatile buildings need higher thresholds
+        # Calculate consumption volatility
         volatility = meter_data['daily_consumption'].std() / meter_data['daily_consumption'].mean()
 
         for threshold in thresholds:
             # Calculate z-scores for the consumption
             meter_data['test_zscore'] = np.abs((meter_data['daily_consumption'] -
-                                          meter_data['daily_consumption'].mean()) /
-                                          meter_data['daily_consumption'].std())
+            meter_data['daily_consumption'].mean()) /
+            meter_data['daily_consumption'].std())
 
             # Calculate percent of anomalies with this threshold
             anomaly_percent = (meter_data['test_zscore'] > threshold).mean() * 100
 
-            # Penalize thresholds that produce too many or too few anomalies
+            # stop thresholds that produce too many or too few anomalies
             if anomaly_percent < min_anomalies_percent or anomaly_percent > max_anomalies_percent:
                 continue
 
@@ -539,7 +535,6 @@ class EnhancedSmartMeterAnalytics:
               weekday_std = meter_data[meter_data['is_weekend'] == 0]['daily_consumption'].std()
 
               # Weekend detection - more precise by understanding this specific building
-              # Weekend detection - more precise by understanding this specific building
               weekend_historic = meter_data[meter_data['is_weekend'] == 1]['daily_consumption']
               if len(weekend_historic) >= 4:
                 weekend_avg = weekend_historic.mean()
@@ -567,7 +562,7 @@ class EnhancedSmartMeterAnalytics:
                       df.at[idx, 'anomaly_score'] = max(df.at[idx, 'anomaly_score'], 0.6)
                       df.at[idx, 'detection_confidence'] = max(df.at[idx, 'detection_confidence'], 0.7)
 
-          # Libraries have specific open/closed patterns
+          # Libraries with specific open/closed patterns
           elif building_type == 'library':
               if len(meter_data) >= 28:  # Need enough data for reliable patterns
                   # Libraries have consistent open hours, check for variations
@@ -657,7 +652,7 @@ class EnhancedSmartMeterAnalytics:
           # Fire stations should have very consistent baseline with min/max thresholds
           elif building_type == 'fire_station':
               if len(meter_data) >= 14:
-                  # Fire stations should have a minimum baseline usage (essential systems)
+                  # Fire stations should have a minimum baseline usage
                   min_usage = meter_data['daily_consumption'].quantile(0.1) * 0.7
                   # And unusual spikes could indicate issues
                   max_usage = meter_data['daily_consumption'].quantile(0.9) * 1.5
@@ -702,7 +697,7 @@ class EnhancedSmartMeterAnalytics:
                       if pd.isna(rolling_median.loc[idx]) or pd.isna(rolling_mad.loc[idx]) or rolling_mad.loc[idx] == 0:
                           continue
 
-                      # Use median absolute deviation (more robust than std dev)
+                      # Use median absolute deviation
                       mad_score = abs(row['daily_consumption'] - rolling_median.loc[idx]) / max(1.0, rolling_mad.loc[idx])
 
                       if mad_score > 5.0 and not row['is_refill']:
@@ -1219,7 +1214,15 @@ class EnhancedSmartMeterAnalytics:
         if 'Sudden consumption change' in str(anomaly_row['anomaly_type']):
             if 'consumption_diff' in anomaly_row and not pd.isna(anomaly_row['consumption_diff']):
                 diff = anomaly_row['consumption_diff']
-                precise_anomalies.append(f"Abrupt {'increase' if diff > 0 else 'decrease'} of {abs(diff):.2f} kWh from previous day")
+                change_direction = 'increase' if diff > 0 else 'decrease'
+                
+                # Add context about why this change is flagged as an anomaly
+                if (change_direction == 'decrease' and anomaly_row['daily_consumption'] > anomaly_row.get('expected_consumption', 0)):
+                    precise_anomalies.append(f"Abrupt {change_direction} of {abs(diff):.2f} kWh from previous day (still higher than expected)")
+                elif (change_direction == 'increase' and anomaly_row['daily_consumption'] < anomaly_row.get('expected_consumption', 0)):
+                    precise_anomalies.append(f"Abrupt {change_direction} of {abs(diff):.2f} kWh from previous day (but still below expected)")
+                else:
+                    precise_anomalies.append(f"Abrupt {change_direction} of {abs(diff):.2f} kWh from previous day")
 
         # Handle holiday anomalies
         if 'holiday' in str(anomaly_row['anomaly_type']).lower() and anomaly_row['is_holiday']:
@@ -1232,10 +1235,15 @@ class EnhancedSmartMeterAnalytics:
                 explanation.append(f"• {anomaly}")
 
         # Generate clear, specific causes based on patterns and magnitude
-        causes = []
+        # Calculate pct_diff properly
+        pct_diff = 0
+        if not pd.isna(anomaly_row.get('expected_consumption')) and anomaly_row.get('expected_consumption', 0) > 0:
+            pct_diff = ((anomaly_row['daily_consumption'] - anomaly_row['expected_consumption']) / 
+                        anomaly_row['expected_consumption'] * 100)
+        pct_diff_abs = abs(pct_diff)
 
         # Determine potential causes based on anomaly magnitude and context
-        pct_diff_abs = abs(pct_diff) if 'pct_diff' in locals() else 0
+        causes = []  # Ensure this is initialized
 
         if pct_diff_abs > 500:
             causes.append("CRITICAL: Potential major gas leak or system failure")
@@ -1246,9 +1254,9 @@ class EnhancedSmartMeterAnalytics:
             causes.append("Unauthorized usage or equipment malfunction")
             causes.append("Multiple systems operating outside normal parameters")
         elif pct_diff_abs > 100:
-            if anomaly_row['is_weekend'] and not anomaly_row['is_holiday']:
+            if anomaly_row.get('is_weekend', False) and not anomaly_row.get('is_holiday', False):
                 causes.append("Unexpected weekend operation (building normally closed)")
-            if 'is_holiday' in anomaly_row and anomaly_row['is_holiday']:
+            if anomaly_row.get('is_holiday', False):
                 causes.append("Unexpected holiday operation (building normally closed)")
             causes.append("Heating/cooling system malfunction")
             causes.append("Major deviation from scheduled operation")
@@ -1260,12 +1268,12 @@ class EnhancedSmartMeterAnalytics:
             causes.append("Minor variation from expected pattern")
             causes.append("Potential early indicator of equipment degradation")
 
-        # Add temperature-specific causes if relevant
-        if 'avg_temperature' in anomaly_row and 'temp_expected_consumption' in anomaly_row:
-            if (anomaly_row['daily_consumption'] > anomaly_row['temp_expected_consumption'] * 1.5):
-                causes.append("Consumption not following expected temperature pattern")
+        # Add default cause if none were added but it's an anomaly
+        if not causes and anomaly_row.get('is_anomaly', False):
+            causes.append("Unusual consumption pattern detected")
+            causes.append("Potential operation outside of expected schedule")
 
-        # Add specific anomaly causes
+        # Add the causes to the explanation
         if causes:
             explanation.append("POTENTIAL CAUSES:")
             for cause in causes:
@@ -1297,14 +1305,12 @@ class EnhancedSmartMeterAnalytics:
             actions.append("Monitor in coming days for pattern development")
             actions.append("No immediate action required unless pattern continues")
 
-        # Add specific recommendations based on day type
-        if anomaly_row['is_weekend'] and anomaly_row['daily_consumption'] > anomaly_row['expected_consumption'] * 1.3:
-            actions.append("Specifically check why building systems are active on weekend")
+        # Add default actions if none were added but it's an anomaly
+        if not actions and anomaly_row.get('is_anomaly', False):
+            actions.append("Review building operation schedule")
+            actions.append("Check for unauthorized usage or system malfunctions")
 
-        if 'is_holiday' in anomaly_row and anomaly_row['is_holiday'] and anomaly_row['daily_consumption'] > anomaly_row['expected_consumption'] * 1.3:
-            actions.append("Verify holiday scheduling is properly configured in building systems")
-
-        # Add the recommendations
+        # Add the actions to explanation
         if actions:
             explanation.append("RECOMMENDED ACTIONS:")
             for action in actions:

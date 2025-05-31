@@ -83,7 +83,7 @@ def fetch_temperature(town):
     
     url = "https://api.met.no/weatherapi/locationforecast/2.0/compact"
     headers = {
-        'User-Agent': 'SmartMeterAnomalyDetection/1.0 (sekeriye.osman@mymtu.ie)'  # Replace with your email
+        'User-Agent': 'SmartMeterAnomalyDetection/1.0 (sekeriye.osman@mymtu.ie)' 
     }
     params = {'lat': lat, 'lon': lon}
     
@@ -120,7 +120,7 @@ def update_weather_data(town, temperature):
         existing_record = cursor.fetchone()
         
         # Use a predefined user ID instead of a string
-        created_by_id = 1  # Replace with an actual user ID from your system
+        created_by_id = 1 
         
         if existing_record:
             # Update existing record
@@ -152,7 +152,6 @@ def update_weather_data(town, temperature):
             pass
         return False
 
-# Replace this section in your weather.py
 def sync_all_weather():
     """Sync weather data for Cork only"""
     logger.info("Starting Cork weather data synchronization")
